@@ -10,23 +10,24 @@ export async function getWeather(location) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    console.log(data)
-    processWeatherData(data)
+    console.log(data);
+    return data; // Return the fetched data
   } catch (error) {
     console.error("Error fetching weather data:", error);
+    return null; // Return null on error
   }
 }
 
-
-export async function processWeatherData(data){
-    let processedWeatherData = {
+ export async function processWeatherData(data){
+    let weatherData = {
         description:  data.description,
-        conditions:  data.currentConditions.conditions,
+        conditions: data.currentConditions.conditions,
         temp: data.currentConditions.temp,
         address: data.resolvedAddress,
         icon:  data.currentConditions.icon
     }
 
-    console.log(processedWeatherData)
-    console.log(processedWeatherData.address)
+    console.log(weatherData)
+    console.log(weatherData.address)
+    return weatherData; // Return the processed data
 }
