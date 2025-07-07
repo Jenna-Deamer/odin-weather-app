@@ -7,6 +7,12 @@
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-linear-gradient(90deg, hsla(298, 16%, 68%, 0.06) 0px, hsla(298, 16%, 68%, 0.06) 1px, transparent 1px, transparent 21px, hsla(298, 16%, 68%, 0.06) 21px, hsla(298, 16%, 68%, 0.06) 22px, transparent 22px, transparent 72px), repeating-linear-gradient(0deg, hsla(298, 16%, 68%, 0.06) 0px, hsla(298, 16%, 68%, 0.06) 1px, transparent 1px, transparent 21px, hsla(298, 16%, 68%, 0.06) 21px, hsla(298, 16%, 68%, 0.06) 22px, transparent 22px, transparent 72px), repeating-linear-gradient(135deg, hsla(298, 16%, 68%, 0.06) 0px, hsla(298, 16%, 68%, 0.06) 1px, transparent 1px, transparent 21px, hsla(298, 16%, 68%, 0.06) 21px, hsla(298, 16%, 68%, 0.06) 22px, transparent 22px, transparent 72px), linear-gradient(90deg, hsl(275, 3%, 97%), hsl(275, 3%, 97%));
 }
 
 /*Inherit fonts for form controls*/
@@ -42,3 +48,65 @@ h6 {
     text-wrap: balance;
 }
 
+
+/*Main styles*/
+.hidden {
+    display: none;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 600px;
+    height: 500px;
+    box-shadow: 10px 10px 5px rgb(0, 0, 0, .2);
+
+}
+
+h1 {
+    margin-bottom: .5em;
+}
+
+input {
+    padding: .1em;
+}
+
+form button {
+    width: 120px;
+    height: 30px;
+    background-color: #1B9AAA;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    transition: .2s ease-in-out;
+
+}
+
+form button:hover {
+    background-color: #20afc2;
+}
+
+#container div {
+    margin-top: 1em;
+    text-align: center;
+}
+
+#desc-label {
+    margin: .5em;
+    font-size: 1.4em;
+}
+
+#results {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#results p {
+    font-size: 1.4em;
+    font-weight: 700;
+}
